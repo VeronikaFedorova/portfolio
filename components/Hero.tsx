@@ -17,6 +17,7 @@ const Hero = () => {
           fill='purple'
         />
         <Spotlight className='top-28 left-80 h-[80vh] w-[50vw]' fill='blue' />
+        <Spotlight className='-top-60 left-80 h-[200vh] w-[80vw]' fill='pink' />
       </div>
       <div className='h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0'>
         {/* Radial gradient for the container to give a faded look */}
