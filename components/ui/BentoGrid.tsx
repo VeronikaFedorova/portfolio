@@ -63,10 +63,15 @@ export const BentoGridItem = ({
     },
   };
 
-  const handleCopy = () => {
-    const text = 'fedorovavv03@gmail.com';
-    navigator.clipboard.writeText(text);
-    setCopied(true);
+  const handleCopy = async () => {
+    try {
+      const text = 'fedorovavv03@gmail.com';
+      await navigator.clipboard.writeText(text);
+      console.log(text);
+      setCopied(true);
+    } catch (error) {
+      console.error('Failed to copy text: ', error);
+    }
   };
 
   return (
@@ -165,11 +170,11 @@ export const BentoGridItem = ({
               </div>
 
               <ShimmerButton
-                title={copied ? 'Email is Copied!' : 'Copy my email address'}
+                title={copied ? 'Email is Copied!' : 'Copy email address'}
                 icon={<LuCopyCheck />}
                 position='left'
                 handleClick={handleCopy}
-                otherClasses='!bg-[#161A31]'
+                otherClasses='!bg-[#161A31] sm:text-xs md:text-sm'
               />
             </div>
           )}
