@@ -1,3 +1,4 @@
+import Experience from "@/components/Experience";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
@@ -5,6 +6,7 @@ import { FloatingNav } from '@/components/ui/FloatingNav';
 import { FaHome } from "react-icons/fa";
 import { FiAlignCenter } from "react-icons/fi";
 import { GoProjectRoadmap } from "react-icons/go";
+import { LiaBuromobelexperte } from "react-icons/lia";
 
 export default function Home() {
   return (
@@ -13,11 +15,13 @@ export default function Home() {
         <FloatingNav navItems={[
           {name: 'Home', link: './', icon: <FaHome />},
           {name: 'Skills', link: '#about', icon: <FiAlignCenter />},
-          {name: 'Projects', link: '#projects', icon: <GoProjectRoadmap />}
+          {name: 'Projects', link: '#projects', icon: <GoProjectRoadmap />},
+          {name: 'Experience', link: '#experience', icon: <LiaBuromobelexperte />}
         ]} />
         <Hero />
         <Grid />
         <RecentProjects />
+        <Experience />
       </div>
     </main>
   );
